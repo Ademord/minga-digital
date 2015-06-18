@@ -376,7 +376,6 @@ namespace MingaDigital.App.EF
                 c => new
                     {
                         activo_minga_id = c.Int(nullable: false),
-                        equipo_id = c.Int(nullable: false),
                         detalle = c.String(),
                         estado = c.Int(nullable: false),
                     })
