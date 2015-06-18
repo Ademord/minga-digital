@@ -358,7 +358,6 @@ namespace MingaDigital.App.EF
                 c => new
                     {
                         activo_minga_id = c.Int(nullable: false),
-                        componente_id = c.Int(nullable: false),
                         tipo_componente_id = c.Int(nullable: false),
                         marca = c.String(),
                         caracteristica = c.String(),

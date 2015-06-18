@@ -27,31 +27,31 @@ namespace MingaDigital.App.Controllers
                 Db.Equipo
                 .Select(x => new EquipoIndexTableRow
                 {
-                    EquipoId = x.EquipoId,
+                    ActivoMingaId = x.ActivoMingaId,
                     Detalle = x.Detalle,
-                    Estado = (int)x.Estado 
+                    Estado = (int)x.Estado
                 });
-            
+
             var result = query.ToArray();
-            
+
             return result;
         }
-        
+
         protected override EquipoDetailModel EntityToDetailModel(Equipo entity)
         {
             return new EquipoDetailModel
             {
-                EquipoId = entity.EquipoId,
+                ActivoMingaId = entity.ActivoMingaId,
                 Detalle = entity.Detalle,
                 Estado = (int) entity.Estado
             };
         }
-        
+
         protected override EquipoEditorModel GetInitialEditorModel()
         {
             return new EquipoEditorModel();
         }
-        
+
         protected override EquipoEditorModel EntityToEditorModel(Equipo entity)
         {
             return new EquipoEditorModel
@@ -60,14 +60,14 @@ namespace MingaDigital.App.Controllers
                 Estado = (int)entity.Estado
             };
         }
-        
+
         protected override Equipo EditorModelToEntity(EquipoEditorModel model)
         {
             var entity = new Equipo();
             ApplyEditorModel(model, entity);
             return entity;
         }
-        
+
         protected override void ApplyEditorModel(EquipoEditorModel model, Equipo entity)
         {
             entity.Detalle = model.Detalle;
