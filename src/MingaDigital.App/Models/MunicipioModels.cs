@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MingaDigital.App.Models
 {
-    [Description("Tipos de Componentes")]
+    [Description("Municipios")]
     public class MunicipioIndexModel : BasicIndexModel<MunicipioIndexTableRow>
     {
     }
@@ -20,7 +20,7 @@ namespace MingaDigital.App.Models
         
     }
     
-    [Description("Tipos de Componente")]
+    [Description("Municipio")]
     public class MunicipioDetailModel
     {
         [Display(Name = "Codigo")]
@@ -31,7 +31,7 @@ namespace MingaDigital.App.Models
         
     }
     
-    [Description("Tipo de Componente")]
+    [Description("Municipio")]
     public class MunicipioEditorModel
     {
         [Required(ErrorMessage = "{0} es un campo requerido.")]
